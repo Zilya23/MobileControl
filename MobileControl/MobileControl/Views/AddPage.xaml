@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileControl.Views.AddPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Text"/>
+                <Entry x:Name="entry_text"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Description"/>
+                <Entry x:Name="entry_desc"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Date"/>
+                <DatePicker x:Name="datePick"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button Text="Добавить"
+                        x:Name="btn_add"
+                        Clicked="btn_add_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
