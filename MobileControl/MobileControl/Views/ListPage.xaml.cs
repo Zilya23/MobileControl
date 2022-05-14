@@ -25,12 +25,30 @@ namespace MobileControl.Views
                 item.Description = "Description" + i.ToString();
                 item.date = DateTime.Now.AddDays(i);
                 items.Add(item);
+                lv_list.ItemsSource = items;
             }
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddPage());
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            if (lv_list.SelectedItem != null)
+            {
+                var i = lv_list.SelectedItem as Models.Item;
+                string id_del = i.Id;
+                foreach (var a in items)
+                {
+                    if(a.Id == id_del)
+                    {
+                        items.Remove(a);
+                    }
+                }
+                lv_list.ItemsSource = items;
+            }
         }
     }
 }
