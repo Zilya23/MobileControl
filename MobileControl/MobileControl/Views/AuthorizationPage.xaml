@@ -19,7 +19,11 @@
             </StackLayout>
             <StackLayout>
                 <Label Text="Нет акаунта? Зарегистрируйтесь!" 
-                       x:Name="lbl_reg"/>
+                       x:Name="lbl_reg">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

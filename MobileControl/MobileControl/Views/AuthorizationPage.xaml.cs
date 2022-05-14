@@ -29,5 +29,10 @@ namespace MobileControl.Views
                 entry_pass.Text = "Неверный пароль";
             }
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RegistrationPage());
+        }
     }
 }
