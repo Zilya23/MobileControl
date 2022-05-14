@@ -40,7 +40,7 @@ namespace MobileControl.Views
             {
                 var i = lv_list.SelectedItem as Models.Item;
                 string id_del = i.Id;
-                foreach (var a in items)
+                foreach (Models.Item a in items)
                 {
                     if(a.Id == id_del)
                     {
