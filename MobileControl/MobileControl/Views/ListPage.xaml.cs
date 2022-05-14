@@ -29,9 +29,9 @@ namespace MobileControl.Views
             }
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AddPage());
+            await Navigation.PushAsync(new AddPage());
         }
 
         private void Button_Clicked(object sender, EventArgs e)

@@ -5,19 +5,17 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
         <StackLayout>
             <Button Text="Удалить" 
                     x:Name="btn_del"
                     Clicked="Button_Clicked"/>
-            <ListView x:Name="lv_list" 
-                      ItemsSource="{Binding items}">
+            <ListView x:Name="lv_list">
                 <ListView.Header>
-                    <Label Text="{Binding Name}"/>
+                    <Label Text="{Binding Text}"/>
                 </ListView.Header>
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-    
 </ContentPage>

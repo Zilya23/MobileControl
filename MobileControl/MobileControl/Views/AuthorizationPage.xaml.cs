@@ -17,11 +17,11 @@ namespace MobileControl.Views
             InitializeComponent();
         }
 
-        private void btn_auth_Clicked(object sender, EventArgs e)
+        private async void btn_auth_Clicked(object sender, EventArgs e)
         {
             if (entry_login.Text == "123" && entry_pass.Text == "123")
             {
-                Navigation.PushAsync(new ListPage());
+                await Navigation.PushAsync(new ListPage());
             }
             else
             {
@@ -30,9 +30,9 @@ namespace MobileControl.Views
             }
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RegistrationPage());
+            await Navigation.PushAsync(new RegistrationPage());
         }
     }
 }
